@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seçkin Türkmen | Blog</title>
+    <meta name="keywords" content="Python,Java,JavaScript" />
+    <meta
+      name="description"
+      content="Seçkin Türkmen | Blog"
+    />
+    <!-- Fonts Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Tablet -->
+    <link rel="stylesheet" media="(max-width:768px)" href="css/tablet.css" />
+    <link rel="stylesheet" media="(max-width:500px)" href="css/mobile.css" />
+  </head>
+  <body>
+    <header class="bg-dark-blue">
+      <div class="container">
+        <nav id="navbar">
+          <h1 class="heading-small">Seçkin Türkmen</h1>
+
+          <ul>
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#education">Eğitimler</a></li>
+            <li><a href="#courses">Kurslar</a></li>
+            <li><a href="#contact">İletişim</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home">
+      <img
+        src="images/profılephoto.jpg"
+        alt="Seçkin Türkmen"
+		style="width:300px; height:300px;"
+      />
+
+      <div class="name text-center">
+          <h2 class="heading-big">Seçkin Türkmen</h2>
+          <p>Computer Engineer | Founder of ProjectLands</p>
+          <p>
+              Ufak yaşlarda başlayan bilgisayara ilgim lise zamanında yazılıma dönüştü. Bunun için meslek lisesini tercih ettim ve Bilgisayar Mühendisliği mezunu
+              oldum.
+              </br>
+              Kendimi gelistirmek ekstra birşeyler öğrenmek için kurslara gittim. Artık hayalim olan işi yaparak kendimi geliştirmeye devam ediyorum.
+          </p>
+      </div>
+    </section>
+
+    <section id="education" class="bg-dark-blue">
+      <h3 class="text-center heading-medium">Alınan Eğitimler</h3>
+      <div class="items">
+        <article class="item">
+          <i class="fa fa-pencil-alt"></i>
+          <h3>İlkokul</h3>
+          <p>
+              <a href="https://ulker.meb.k12.tr/" target="_blank">
+                  Hacı İslam Ülker Hacı Şakire Ülker İlköğretim Okulu
+              </a>
+          </p>
+        </article>
+        <article class="item">
+          <i class="fa fa-pencil-alt"></i>
+          <h3>Lise</h3>
+          <p>
+              <a href="https://galatamtal.meb.k12.tr/" target="_blank">
+                  Beyoğlu Anadolu Teknik Lisesi
+              </a>
+          </p>
+        </article>
+        <article class="item">
+          <i class="fa fa-pencil-alt"></i>
+          <h3>Üniversite</h3>
+          <p>
+              <a href="https://www.istanbul.edu.tr/tr/_" target="_blank">
+                  İstanbul Üniversitesi
+              </a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="courses">
+      <h3 class="text-center heading-medium">Alınan Kurslar</h3>
+
+      <div class="container">
+        <div class="courses">
+          <!-- Course 1 -->
+          <div class="course">
+            <div class="course-image">
+              <img src="images/cimage.png" alt="C# Eğitimi" />
+            </div>
+
+            <div class="course-info">
+              <div class="title">
+                C# Eğitimi
+              </div>
+              <div class="description">
+                yazılım24 kursundan alınan temel C# eğitimi.
+              </div>
+              <div class="instructor">02.2016 - 05.2016</div>
+            </div>
+          </div>
+          <!-- Course 2 -->
+          <div class="course">
+            <div class="course-image">
+              <img src="images/netimage.png" alt=".NET Eğitimi" />
+            </div>
+
+            <div class="course-info">
+              <div class="title">
+                .NET Eğitimi
+              </div>
+              <div class="description">
+                Sıfırdan .NET Eğitimi
+              </div>
+              <div class="instructor">05.2017 - 01.2018</div>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="course">
+            <div class="course-image">
+              <img src="images/english2.jpg" alt="English" style="width:240px;height:135px;"/>
+            </div>
+
+            <div class="course-info">
+              <div class="title">
+                  İngilizce Eğitimi
+              </div>
+              <div class="description">
+                  Sıfırdan İngilizce Eğitimi
+              </div>
+              <div class="instructor">11.2013 - 05.2014</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="bg-dark-blue">
+      <div class="contact-form">
+        <form>
+          <h4 class="text-center heading-medium">Bana Ulaşın</h4>
+
+          <div class="form-group">
+            <label for="name">İsim</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+              placeholder="İsim"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="E-Mail"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Mesaj</label>
+            <textarea
+              name="message"
+              id="message"
+              class="form-control"
+              rows="5"
+              placeholder="Mesajınız..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-block">Gönder</button>
+        </form>
+
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
