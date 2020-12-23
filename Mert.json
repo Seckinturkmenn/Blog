@@ -1,0 +1,30 @@
+
+  {
+    "UserName": "Mert",
+    "Tasks": [
+      {
+        "TaskId": 1,
+        "TaskName": "Css",
+        "IsCompleted": false,
+        "EndDate": "01-01-1900"
+      },
+      {
+        "TaskId": 2,
+        "TaskName": "lorem2",
+        "IsCompleted": true,
+        "EndDate": "23-12-2020"
+      },
+      {
+        "TaskId": 3,
+        "TaskName": "test2",
+        "IsCompleted": false,
+        "EndDate": "23-12-2020"
+      },
+      {
+        "TaskId": 4,
+        "TaskName": "API-HTML",
+        "IsCompleted": false,
+        "EndDate": "23-12-2020"
+      }
+    ]
+  }

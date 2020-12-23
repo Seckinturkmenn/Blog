@@ -1,0 +1,41 @@
+{
+  "UserName": "Seckin",
+  "Tasks": [
+    {
+      "TaskId": 1,
+      "TaskName": "lorem",
+      "IsCompleted": false,
+      "EndDate": "1900-01-01"
+    },
+    {
+      "TaskId": 2,
+      "TaskName": "lorem2",
+      "IsCompleted": true,
+      "EndDate": "2020-23-12"
+    },
+    {
+      "TaskId": 3,
+      "TaskName": "test2",
+      "IsCompleted": false,
+      "EndDate": "23-12-2020"
+    },
+    {
+      "TaskId": 4,
+      "TaskName": "API",
+      "IsCompleted": false,
+      "EndDate": "26-12-2020"
+    },
+    {
+      "TaskId": 5,
+      "TaskName": "HTML-CSS",
+      "IsCompleted": false,
+      "EndDate": "23-12-2020"
+    },
+    {
+      "TaskId": 6,
+      "TaskName": ".NET Core",
+      "IsCompleted": false,
+      "EndDate": "23-12-2020"
+    }
+  ]
+}
