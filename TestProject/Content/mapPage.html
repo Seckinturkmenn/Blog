@@ -1,0 +1,48 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#showMap" role="tab" aria-controls="home" aria-selected="true">Haritada Göster</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#showList" role="tab" aria-controls="profile" aria-selected="false">Listele</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="showMap" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane active" id="storeTab_Map" role="tabpanel">
+            <p>Deprem adresini görmek için üzerine tıklayabilirsiniz.</p>
+            <div id="map" style="width: 100%; height: 500px;"></div>
+            <br />
+            <p>
+                <img src="images/marker-icon-2x-red.png" style="height: 32px;" /> Şiddeti 6'dan büyük olan depremler
+            </p>
+            <p>
+                <img src="images/marker-icon-2x-green.png" style="height: 32px;" /> Şiddeti 6 ile 3 arasındaki depremler  
+            </p>
+            <p>
+                <img src="images/marker-icon-2x-blue.png" style="height: 32px;" /> Şiddeti 3'ten düşük olan depremler
+            </p>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="showList" role="tabpanel" aria-labelledby="profile-tab">
+        <table id="table_id" class="display" border="1px">
+            <thead>
+                <tr>
+                    <th>Earth ID</th>
+                    <th>Title</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each earthquake}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{getTitle @index}}</td>
+                    <td>{{getPlace @index}}</td>
+                    <td>{{fromNow @index}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
