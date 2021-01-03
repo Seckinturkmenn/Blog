@@ -5,6 +5,7 @@ var greenIcon = {};
 var redIcon = {};
 
 $(document).ready(function () {
+    contentData.selectedTab = 0;
     compilePage();
 });
 
@@ -58,6 +59,10 @@ function compilePage(){
 
     CreateMap();
     $('#table_id').DataTable();
+}
+
+function setSelectedTab(index){
+    contentData.selectedTab = index;
 }
 
 function CreateMap(){
