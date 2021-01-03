@@ -17,6 +17,10 @@ function compilePage(){
     seconds = seconds-1;  
     document.querySelector("#timer").innerHTML = seconds + "s ";
 
+    if(seconds <= 30){
+        $("#timer").css("color", "red");
+    }
+
     if (seconds < 0) {
         clearInterval(x);
         compilePage();
