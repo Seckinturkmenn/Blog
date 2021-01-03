@@ -1,13 +1,13 @@
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#kandilliMap" role="tab" aria-controls="profile" aria-selected="false">Kandilli Rasathanesi</a>
+        <a class="nav-link active" id="showMap" data-toggle="tab" href="#kandilliMap" role="tab" aria-controls="profile" aria-selected="false">Kandilli Rasathanesi</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#showList" role="tab" aria-controls="profile" aria-selected="false">Listele</a>
+        <a class="nav-link" id="showList" data-toggle="tab" href="#showList" role="tab" aria-controls="profile" aria-selected="false" onclick="">Listele</a>
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane active" id="storeTab_Map" role="tabpanel">
+    <div class="tab-pane active" id="Turkey_Map" role="tabpanel">
         <p>Deprem detaylarını görmek için üzerine tıklayabilirsiniz.</p>
         <div id="mapKandilli" style="width: 100%; height: 500px;"></div>
         <br />
@@ -34,7 +34,7 @@
             <tbody>
                 {{#each kandilli}}
                 <tr>
-                    <td>{{editName_lokasyon}}</td>
+                    <td>{{editLocation _lokasyon}}</td>
                     <td>{{_mag}}</td>
                     <td>{{_Depth}}</td>
                     <td>{{_name}}</td>
