@@ -5,13 +5,14 @@ var greenIcon = {};
 var redIcon = {};
 
 $(document).ready(function () {
-    contentData.selectedTab = 0;
+    moment.locale('tr');
+    contentData.selectedTab = 'kandilliMap';
     compilePage();
 });
 
 function compilePage(){
     var x2js = new X2JS();
-    var seconds=300;
+ /*   var seconds=10;
 
     var x = setInterval(function() {
     seconds = seconds-1;  
@@ -25,7 +26,7 @@ function compilePage(){
         clearInterval(x);
         compilePage();
     }
-    }, 1000);
+    }, 1000);*/
 
 
     $.ajax({
@@ -36,7 +37,7 @@ function compilePage(){
             var x2js = new X2JS();
             contentData.kandilli = x2js.xml_str2json(new XMLSerializer().serializeToString(data.documentElement)).eqlist.earhquake;
         },
-        error: console.log("Sayfa compile edilemedi.")
+        error: function (err) { console.error(err); }
     });
 
     $.ajax({
@@ -46,7 +47,7 @@ function compilePage(){
         success: function (header) {
             $("#m_header").html(Handlebars.compile(header)(headerData));
         },
-        error: console.log("Sayfa compile edilemedi.")
+        error: function (err) { console.error(err); }
     });
 
     getKandilliIconCounts();
@@ -58,15 +59,20 @@ function compilePage(){
         success: function (mapPage) {
             $("#m_content").html(Handlebars.compile(mapPage)(contentData));
         },
-        error: console.log("hata")
+        error: function (err) { console.error(err); }
     });
 
     CreateMap();
-    $('#table_id').DataTable();
+    $('#table_id').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+        }
+    });
 }
 
-function setSelectedTab(index){
-    contentData.selectedTab = index;
+function setSelectedTab(currentTab){
+    contentData.selectedTab = currentTab;
+    window.dispatchEvent(new Event('resize'));
 }
 
 function CreateMap(){
@@ -103,8 +109,8 @@ function CreateMap(){
     });
 
     L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
-        attribution: ' &copy; <a href="https://www.seckinturkmen.com/" target="_blank">OpenStreetMap</a> katılımcıları'
-    }).addTo(map);   
+        attribution: '&copy; <a href="https://www.seckinturkmen.com/" target="_blank">Seckin Türkmen | &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> katılımcıları'
+    }).addTo(map);
 
     for(var i=0; i < contentData.kandilli.length; i++) {
         if(contentData.kandilli[i]._mag <= 3)

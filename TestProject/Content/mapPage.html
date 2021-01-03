@@ -1,13 +1,13 @@
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active" id="showMap" data-toggle="tab" href="#kandilliMap" role="tab" aria-controls="profile" aria-selected="false">Haritada Göster</a>
+        <a class="nav-link {{#ifCond selectedTab '==' 'kandilliMap'}}active{{/ifCond}}" data-toggle="tab" href="#kandilliMap" role="tab" aria-controls="profile" aria-selected="false" onclick="setSelectedTab('kandilliMap');">Haritada Göster</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="showMap" data-toggle="tab" href="#showList" role="tab" aria-controls="profile" aria-selected="false" onclick="">Listele</a>
+        <a class="nav-link  {{#ifCond selectedTab '==' 'showList'}}active{{/ifCond}}" data-toggle="tab" href="#showList" role="tab" aria-controls="profile" aria-selected="false" onclick="setSelectedTab('showList');">Listele</a>
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane active" id="kandilliMap" role="tabpanel">
+    <div class="tab-pane {{#ifCond selectedTab '==' 'kandilliMap'}}active{{/ifCond}}" id="kandilliMap" role="tabpanel">
         <p>Deprem detaylarını görmek için üzerine tıklayabilirsiniz.</p>
         <div id="mapKandilli" style="width: 100%; height: 500px;"></div>
         <br />
@@ -21,7 +21,7 @@
             <img src="images/marker-icon-2x-blue.png" style="height: 32px;" /> Şiddeti 3'ten düşük olan depremler ({{kandilliBlueIconCount}})
         </p>
     </div>
-    <div class="tab-pane fade" id="showList" role="tabpanel" aria-labelledby="showList-tab">
+    <div class="tab-pane {{#ifCond selectedTab '==' 'showList'}}active{{/ifCond}}" id="showList" role="tabpanel" aria-labelledby="showList-tab">
         <table id="table_id" class="display">
             <thead>
                 <tr>
@@ -37,7 +37,7 @@
                     <td>{{editLocation _lokasyon}}</td>
                     <td>{{_mag}}</td>
                     <td>{{_Depth}}</td>
-                    <td>{{_name}}</td>
+                    <td>{{formatDate _name 'long'}}</td>
                 </tr>
                 {{/each}}
             </tbody>
